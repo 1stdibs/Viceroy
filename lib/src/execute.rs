@@ -508,7 +508,7 @@ fn configure_wasmtime(profiling_strategy: ProfilingStrategy) -> wasmtime::Config
     // memory space if multiple engines are spun up in a single process. We'll likely want to move
     // to the on-demand allocator eventually for most purposes; see
     // https://github.com/fastly/Viceroy/issues/255
-    pooling_allocation_config.instance_count(100);
+    pooling_allocation_config.instance_count(1000);
 
     config.allocation_strategy(InstanceAllocationStrategy::Pooling(
         pooling_allocation_config,
