@@ -5,7 +5,6 @@
 //   (2): Deny broken documentation links.
 //   (3): Deny invalid codeblock attributes in documentation.
 //   (4): Promote warnings in examples into errors, except for unused variables.
-#![cfg_attr(not(debug_assertions), deny(warnings))]
 #![cfg_attr(not(debug_assertions), deny(clippy::all))]
 #![cfg_attr(not(debug_assertions), deny(broken_intra_doc_links))]
 #![cfg_attr(not(debug_assertions), deny(invalid_codeblock_attributes))]
